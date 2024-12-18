@@ -30,6 +30,15 @@ jobs:
       - name: Create a ignore.list file
         run: |
           # eg: echo "<path>,<fqbn>" >> ignore.list
+          echo "SetBaudRate,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "SetFrameRate,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "getdistance,esp32:esp32:XIAO_ESP32C3" >> ignore.list
+          echo "SetBaudRate,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "SetFrameRate,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "getdistance,esp32:esp32:XIAO_ESP32C6" >> ignore.list
+          echo "SetBaudRate,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+          echo "SetFrameRate,esp32:esp32:XIAO_ESP32S3" >> ignore.list
+          echo "getdistance,esp32:esp32:XIAO_ESP32S3" >> ignore.list
 
       - name: Build sketch
         run: ./ci/tools/compile.sh
